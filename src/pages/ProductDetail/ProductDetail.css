@@ -1,0 +1,136 @@
+.product-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.thumbnail-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.thumbnail-container img:hover {
+    opacity: 0.8;
+}
+
+.thumbnail-container img.active {
+    border: 2px solid #007bff;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.marca {
+    color: #666;
+}
+
+.color-selector,
+.talla-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color-options,
+.talla-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.color-btn,
+.talla-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.color-btn:hover,
+.talla-btn:hover {
+    background: #f0f0f0;
+}
+
+.color-btn.selected,
+.talla-btn.selected {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.especificaciones {
+    margin-top: 20px;
+}
+
+.especificaciones ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.especificaciones li {
+    margin: 5px 0;
+    color: #666;
+}
+
+.add-to-cart-btn {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.add-to-cart-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .product-detail-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,27 @@
+.top-banner {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+}
+
+.top-banner p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .top-banner {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
