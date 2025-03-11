@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar/Navbar'
 import { TopBanner } from './components/TopBanner/TopBanner'
 import { Home } from './pages/home/Home'
@@ -17,7 +18,7 @@ import { Footer } from './components/Footer/Footer';
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="app">
           <TopBanner />
           <Navbar />
@@ -37,7 +38,7 @@ function App() {
           <Footer />
           <ToastContainer position="bottom-right" autoClose={2000} />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   )
 }

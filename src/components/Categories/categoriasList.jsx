@@ -9,17 +9,17 @@ export function CategoriasList() {
         <div className="categories-grid">
           <div className="category-card">
             <Link to="/categoria/gorras">
-              <img src="/img/categories/img1.svg" alt="Gorras" />
+              <img src="./img/categories/img1.svg" alt="Gorras" />
             </Link>
           </div>
           <div className="category-card">
             <Link to="/categoria/ropa-mujer">
-              <img src="/img/categories/img1.svg" alt="Ropa Mujer" />
+              <img src="./img/categories/img1.svg" alt="Ropa Mujer" />
             </Link>
           </div>
           <div className="category-card">
             <Link to="/categoria/ropa-hombre">
-              <img src="/img/categories/img1.svg" alt="Ropa Hombre" />
+              <img src="./img/categories/img1.svg" alt="Ropa Hombre" />
             </Link>
           </div>
         </div>

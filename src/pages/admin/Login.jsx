@@ -1,8 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/authContext';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase/config';
+import './Login.css';
 
 export function Login() {
     const [email, setEmail] = useState('');
@@ -14,49 +13,14 @@ export function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            console.log('Intentando login con:', email, password);
             const result = await login(email, password);
-            console.log('Login exitoso:', result.user);
             if (result.user) {
-                window.location.href = '/admin';
+                navigate('/admin'); // Esta ruta funcionará con HashRouter
             }
         } catch (error) {
-            console.error('Error en login:', error.message);
-            setError('Credenciales incorrectas: ' + error.message);
+            setError('Credenciales incorrectas');
         }
     };
-
-    const handleRegister = async () => {
-        try {
-            const userCredential = await createUserWithEmailAndPassword(
-                auth, 
-                "kliuvertfigueroa@gmail.com", 
-                "Samuel31724731"
-            );
-            console.log('Usuario creado:', userCredential.user);
-            alert('Cuenta creada con éxito');
-        } catch (error) {
-            console.error('Error completo:', error);
-            let errorMessage = 'Error al crear cuenta: ';
-            switch (error.code) {
-                case 'auth/email-already-in-use':
-                    errorMessage += 'El email ya está registrado';
-                    break;
-                case 'auth/invalid-email':
-                    errorMessage += 'Email inválido';
-                    break;
-                case 'auth/operation-not-allowed':
-                    errorMessage += 'Autenticación por email/password no está habilitada';
-                    break;
-                case 'auth/weak-password':
-                    errorMessage += 'La contraseña es muy débil';
-                    break;
-                default:
-                    errorMessage += error.message;
-            }
-            setError(errorMessage);
-        }
-    }
 
     return (
         <div className="login-container">
@@ -80,10 +44,6 @@ export function Login() {
                     />
                 </div>
                 <button type="submit">Login</button>
-                {/* Botón temporal para registro */}
-                <button type="button" onClick={handleRegister} style={{marginTop: '10px'}}>
-                    Crear Cuenta Admin
-                </button>
             </form>
         </div>
     );
