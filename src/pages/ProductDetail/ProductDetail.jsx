@@ -71,7 +71,7 @@ export function ProductDetail() {
                         {producto.colores.map((color, index) => (
                             <button
                                 key={index}
-                                className={`color-btn ${selectedColor === color ? 'selected' : ''}`}
+                                className={selectedColor === color ? 'selected' : ''}
                                 onClick={() => setSelectedColor(color)}
                             >
                                 {color}
@@ -82,11 +82,11 @@ export function ProductDetail() {
 
                 <div className="talla-selector">
                     <h3>Tallas disponibles:</h3>
-                    <div className="talla-options">
+                    <div className="size-options">
                         {producto.tallas.map((talla, index) => (
                             <button
                                 key={index}
-                                className={`talla-btn ${selectedTalla === talla ? 'selected' : ''}`}
+                                className={selectedTalla === talla ? 'selected' : ''}
                                 onClick={() => setSelectedTalla(talla)}
                             >
                                 {talla}
