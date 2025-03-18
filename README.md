@@ -1,40 +1,30 @@
-# Task Manager
+# E-commerce de Ropa - React + Firebase
 
-A modern task management application built with React that helps you organize your tasks by categories.
+## 📋 Descripción
+Aplicación web de comercio electrónico desarrollada con React y Firebase. Permite a los usuarios explorar productos, filtrar por categorías, gestionar un carrito de compras y realizar pedidos. Incluye un panel de administración para gestionar productos y pedidos.
 
-## Features
+## 🛍️ Características
+- Catálogo de productos con filtros
+- Carrito de compras funcional
+- Panel de administración para gestionar productos
+- Autenticación de usuarios
+- Selección de tallas y colores
+- Diseño responsive
 
-- **Category Management**
-  - Create custom categories
-  - Delete categories with confirmation
-  - Visual feedback for empty states
+## 🚀 Tecnologías
+- React (Hooks, Context API)
+- Firebase (Auth y Firestore)
+- React Router para navegación
+- CSS Modules para estilos
+- GitHub Pages para deployment
 
-- **Task Management**
-  - Create tasks within categories
-  - Mark tasks as complete/incomplete
-  - Delete tasks with confirmation
-  - Filter tasks by status
-
-- **Modern UI**
-  - Smooth animations
-  - Intuitive icons
-  - Responsive design
-  - Visual feedback for actions
-
-## Technologies Used
-
-- React
-- Context API for state management
-- Framer Motion for animations
-- React Icons
-- LocalStorage for data persistence
-- CSS for styling
-
-## Installation
-
-1. Clone the repository
-2. Install dependencies:
+## 📦 Instalación
+1. Clonar el repositorio
+```bash
+git clone [URL-del-repositorio]
+```
+2. Instalar dependencias:
 ```bash
 npm install
 ```
-"# tienda-online" 
+"# tienda-online"

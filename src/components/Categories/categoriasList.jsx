@@ -14,12 +14,12 @@ export function CategoriasList() {
           </div>
           <div className="category-card">
             <Link to="/categoria/ropa-mujer">
-              <img src="./img/categories/img1.svg" alt="Ropa Mujer" />
+              <img src="./img/categories/img2.svg" alt="Ropa Mujer" />
             </Link>
           </div>
           <div className="category-card">
             <Link to="/categoria/ropa-hombre">
-              <img src="./img/categories/img1.svg" alt="Ropa Hombre" />
+              <img src="./img/categories/img3.svg" alt="Ropa Hombre" />
             </Link>
           </div>
         </div>
